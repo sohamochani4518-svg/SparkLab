@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "author": "Soham Ochani",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard", "id": "bb1", "top": 285, "left": -1168.4, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 279, "left": -480.6, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 286.8,
+      "left": -857.4,
+      "rotate": 90,
+      "attrs": { "color": "red", "flip": "" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 286.8,
+      "left": -809.4,
+      "rotate": 90,
+      "attrs": { "color": "yellow" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": 286.8,
+      "left": -771,
+      "rotate": 90,
+      "attrs": { "color": "blue" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 388.8,
+      "left": -797.35,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 388.8,
+      "left": -883.75,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": 388.8,
+      "left": -835.75,
+      "rotate": 90,
+      "attrs": { "value": "1000" }
+    }
+  ],
+  "connections": [
+    [ "led2:C", "bb1:tn.29", "", [ "$bb" ] ],
+    [ "led1:C", "bb1:tn.25", "", [ "$bb" ] ],
+    [ "r1:1", "bb1:40t.d", "", [ "$bb" ] ],
+    [ "r1:2", "bb1:40b.h", "", [ "$bb" ] ],
+    [ "r2:1", "bb1:31t.d", "", [ "$bb" ] ],
+    [ "r2:2", "bb1:31b.h", "", [ "$bb" ] ],
+    [ "r3:1", "bb1:36t.d", "", [ "$bb" ] ],
+    [ "r3:2", "bb1:36b.h", "", [ "$bb" ] ],
+    [ "led1:A", "bb1:31t.a", "green", [ "h0" ] ],
+    [ "led2:A", "bb1:36t.a", "green", [ "h0" ] ],
+    [ "led3:A", "bb1:40t.a", "green", [ "h0" ] ],
+    [ "uno:GND.1", "bb1:tn.50", "black", [ "v-19.2", "h-191.7" ] ],
+    [ "uno:13", "bb1:31b.j", "red", [ "v278.4", "h-498.8" ] ],
+    [ "uno:10", "bb1:40b.j", "blue", [ "v211.2", "h-440.9" ] ],
+    [ "led3:C", "bb1:tn.32", "", [ "$bb" ] ],
+    [ "uno:8", "bb1:36b.j", "yellow", [ "v230.4", "h-498.8" ] ]
+  ],
+  "dependencies": {}
+}
